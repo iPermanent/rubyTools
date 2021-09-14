@@ -191,7 +191,7 @@ class LibrarySizeAlaysizer
     
                 libSize1 = versionsHash1[libraryName][className]
     
-                libSize2 = versionsHash2[libraryName][className] ? versionsHash2[libraryName][className] : "0.00k"
+                libSize2 = versionsHash2[libraryName][className] ? versionsHash2[libraryName][className] : "0.00"
     
                 tmpHash = Hash.new()
                 if libSize1 != libSize2
