@@ -1,4 +1,4 @@
-#用法 ruby linkmapCompare xxx-linkmap.txt yyy-linkmap.txt 即可以同目录下生成一个结果的json文件
+#用法 ruby linkmapCompare.rb xxx-linkmap.txt yyy-linkmap.txt 即可以同目录下生成一个结果的json文件
 
 require 'json'
 
