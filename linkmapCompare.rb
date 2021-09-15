@@ -186,12 +186,12 @@ class LibrarySizeAlaysizer
                 end
     
                 if versionsHash2[libraryName][className] == nil
-                    versionsHash2[libraryName][className] = "0.00"
+                    versionsHash2[libraryName][className] = "0"
                 end
     
                 libSize1 = versionsHash1[libraryName][className]
     
-                libSize2 = versionsHash2[libraryName][className] ? versionsHash2[libraryName][className] : "0.00"
+                libSize2 = versionsHash2[libraryName][className] ? versionsHash2[libraryName][className] : "0"
     
                 tmpHash = Hash.new()
                 if libSize1 != libSize2
