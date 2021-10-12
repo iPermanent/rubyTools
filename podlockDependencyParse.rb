@@ -1,5 +1,6 @@
 
 #用法，ruby podlockDependencyParse.rb /xx/xx/Podfile.lock 生成分析图，需要用到三方工具 graphviz,自行安装，推荐brew安装，不需要额外添加环境变量
+#author 张恒 2021.10.12
 
 class TyPodLib
     attr_accessor:pod_name
@@ -74,7 +75,13 @@ def generateImageData(arrayData)
     File.open(dotFilePath, "w") do |f|
         f.write(dotFileContent)
     end
-
+    
+    #dot 默认布局方式，主要用于有向图
+    #neato 基于spring-model(又称force-based)算法
+    #twopi 径向布局
+    #circo 圆环布局
+    #fdp 用于无向图
+    #需要修改展示样工的只需要把此句前面做一下修改即可
     generateImageCmdString = "fdp -Tpng dependencyRelation.dot -o dependencyRelation.png"
     system(generateImageCmdString)
 end
