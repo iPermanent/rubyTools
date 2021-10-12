@@ -81,7 +81,7 @@ def generateImageData(arrayData)
     #twopi 径向布局
     #circo 圆环布局
     #fdp 用于无向图
-    #需要修改展示样工的只需要把此句前面做一下修改即可
+    #需要修改展示样式的话，只需要把此句最前面做一下修改即可
     generateImageCmdString = "fdp -Tpng dependencyRelation.dot -o dependencyRelation.png"
     system(generateImageCmdString)
 end
