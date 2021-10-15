@@ -1,13 +1,13 @@
 # rubyTools
 ## 日常使用ruby脚本
 
-### checkUnusedClassOrMethod.rb
-检测二进制文件内未使用到的类和方法，不过方法检测不够准确
+### 1.checkUnusedClassOrMethod.rb
+<span style="color:red;">检测二进制文件内未使用到的类和方法，不过方法检测不够准确</span>
 
-### copyImages.rb 
+### 2.copyImages.rb 
 在由整体项目向组件化抽离时，使用到的图片的资源统一拷贝
 
-### findXibUse.rb
+### 3.findXibUse.rb
 查找项目中未使用到的xib文件
 
 ### fixImageAssetName.rb
@@ -15,6 +15,9 @@
 
 ### fixImportHeader.rb
 一键修复不规范的头文件引入问题，如 #import "AFNetworking.h" / #import <AFNetworking.h> => #import <AFNetworking/AFNetworking.h>
+
+### getDumpImageFiles.rb 
+获取项目里重复的图片（md5实际结果为维度判断）
 
 ### linkmapCompare.rb
 比较两个linkmap,生成一个结果文件，内部有各库的大小比较和对应的类大小比较，方便分析app版本升级以后各组件的大小增减问题
