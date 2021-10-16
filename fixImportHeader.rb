@@ -6,6 +6,8 @@
 #但是注意，一定要是在组件正常引入所有的依赖并且pod install以后
 #因为寻找header所在的pods需要pod install 成功，才能根据结构查找到header所属模块
 
+@cache_pod_maps
+
 def replace_action
     #获取当前工程目录，一般主工程目录里还有一层同名的，如果需要可以自行修改
     projectName = File.basename(Dir.getwd)
@@ -24,6 +26,7 @@ end
 
 #查找引入方式不正确的header
 def findFixImportHeaders
+    @cache_pod_maps = Hash.new
     projectName = File.basename(Dir.getwd)
     projectDir = Dir.getwd + "/" + projectName
 
@@ -84,7 +87,10 @@ def findFixImportHeaders
 end
 
 def getPodName(headerFileName)
-
+  if @cache_pod_maps[headerFileName] != nil
+    return @cache_pod_maps[headerFileName]
+  end
+    
   podDir = Dir.getwd + "/Example/Pods"
   headerDir = podDir + "/Headers"
   Dir.glob(podDir + "/**/**/**/**.{h}").each do |name|
@@ -92,6 +98,9 @@ def getPodName(headerFileName)
     if !name.start_with?(headerDir) && name.end_with?(headerFileName)
       tempDir = name.gsub(podDir + "/","")  #删除掉前方pod路径方便操作
       podFolder = tempDir.split("/")[0]#通过取到 pod的第一层目录为pod名
+        
+      cache_pod_maps[headerFileName] = podFolder
+        
       return podFolder
     end
   end
