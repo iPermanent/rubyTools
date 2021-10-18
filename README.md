@@ -1,4 +1,4 @@
-# rubyTools iOS常用脚本
+# [rubyTools iOS常用脚本](https://github.com/iPermanent/rubyTools/blob/master/checkUnusedClassOrMethod.rb)
 ## 日常使用ruby脚本
 
 ### 1.checkUnusedClassOrMethod.rb
