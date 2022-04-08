@@ -95,7 +95,7 @@ def getPodName(headerFileName)
   headerDir = podDir + "/Headers"
   Dir.glob(podDir + "/**/**/**/**.{h}").each do |name|
     next if Dir.exists? name
-    if !name.start_with?(headerDir) && name.end_with?(headerFileName)
+    if !name.start_with?(headerDir) && name.end_with?("/" + headerFileName)
       tempDir = name.gsub(podDir + "/","")  #删除掉前方pod路径方便操作
       podFolder = tempDir.split("/")[0]#通过取到 pod的第一层目录为pod名
         
