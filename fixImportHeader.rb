@@ -99,7 +99,7 @@ def getPodName(headerFileName)
       tempDir = name.gsub(podDir + "/","")  #删除掉前方pod路径方便操作
       podFolder = tempDir.split("/")[0]#通过取到 pod的第一层目录为pod名
         
-      cache_pod_maps[headerFileName] = podFolder
+      @cache_pod_maps[headerFileName] = podFolder
         
       return podFolder
     end
