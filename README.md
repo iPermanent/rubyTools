@@ -2,7 +2,7 @@
 ## 日常使用ruby脚本
 
 ### 1.[checkUnusedClassOrMethod.rb](https://github.com/iPermanent/rubyTools/blob/master/checkUnusedClassOrMethod.rb)
-检测二进制文件内未使用到的类和方法，不过方法检测不够准确
+检测二进制文件内未使用到的类和方法，检测结果请人工确认再删除，出现P0事故概不负责
 
 ### 2.[copyImages.rb](https://github.com/iPermanent/rubyTools/blob/master/copyImages.rb) 
 在由整体项目向组件化抽离时，使用到的图片的资源统一拷贝
