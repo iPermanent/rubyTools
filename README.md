@@ -27,3 +27,6 @@
 
 ### 9.[podlockDependencyParse.rb](https://github.com/iPermanent/rubyTools/blob/master/podlockDependencyParse.rb)
 通过Podfile.lock 分析各组件的依赖关系，生成一个可视化依赖关系图
+
+### 10.[addDevice.rb](https://github.com/iPermanent/rubyTools/blob/master/addDevice.rb)
+通过本地的文件批量向苹果开发者账号里添加设备
